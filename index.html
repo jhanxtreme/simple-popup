@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Popup</title>
+    <link rel="stylesheet" href="simple-popup.css" />
+    <style>
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .sp-wrapper .content {
+            padding: 1em
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Popup Demo</h1>
+
+    <a href="#" class="sp-trigger" data-target="source1">Popup - Source 1</a>
+    <br />
+    <a href="#" class="sp-trigger" data-target="source2">Popup - Source 2</a>
+
+
+
+    <div class="sp-source" id="source1">
+        <h2>LOREM IMPSUM 1</h2>
+        <img src="images/Koala.jpg" width="100%" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, explicabo eaque ipsa repellendus tenetur ex quisquam perspiciatis! Repellendus, iste magni facere dolor earum ad eum, id a ullam alias ab!</p>
+        <h2>LOREM IMPSUM</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, explicabo eaque ipsa repellendus tenetur ex quisquam perspiciatis! Repellendus, iste magni facere dolor earum ad eum, id a ullam alias ab!</p>
+    </div>
+
+    <div class="sp-source" id="source2">
+        <h2>LOREM IMPSUM 1111111</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, explicabo eaque ipsa repellendus tenetur ex quisquam perspiciatis! Repellendus, iste magni facere dolor earum ad eum, id a ullam alias ab!</p>
+        <h2>LOREM IMPSUM 22222</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, explicabo eaque ipsa repellendus tenetur ex quisquam perspiciatis! Repellendus, iste magni facere dolor earum ad eum, id a ullam alias ab!</p>
+    </div>
+
+
+    <script src="simple-popup.js"></script>
+    <script>
+        SimplePopup.init({
+            maxWidth: '500px',
+            duration: '200',
+            position: 'auto',
+            closeButton: true,
+            animation: true
+        });
+        /*
+            maxWidth: '500px',
+            duration: '500',
+            position: 'center',
+            closeButton: true,
+            animation: true
+        */
+    </script>
+
+</body>
+
+</html>
